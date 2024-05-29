@@ -159,14 +159,13 @@ a:hover {
 }
 
 .story-author {
-  font-family: "Avenir Next Condensed", Helvetica, sans-serif;
-  font-size: 1em;
-  font-weight: 100;
-  font-style: italic;
+  font-family: "Avenir Next", Helvetica, sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
 }
 
 .story-image {
-  width: 16em;
+  width: 12em;
   border-radius: 50%;
   height: auto;
   shape-outside: circle();
