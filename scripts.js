@@ -1,7 +1,7 @@
 const stories = [
   {
     title: `Der Nudelsiebhut`,
-    subtitle: `Wie ich ein altes Nudelsieb auf der Straße fand und daraus einen spacingen Hut machte.`,
+    subtitle: `Wie ich ein altes Nudelsieb auf der Straße fand und daraus einen spacingen Hut machte`,
     teller: `Karen Geyer`,
     image: `Karen-mit-Helm.jpg`,
     caption: `Karen mit Helm`,
@@ -9,15 +9,11 @@ const stories = [
     dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
     clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
     consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-    diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-    accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-    dolor sit amet.`,
+    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.`,
     audiofile: `Anpacken statt zaudern - Winfried Kretschmann.mp3`,
   }, {
     title: `Die Tonleiter runter`,
-    subtitle: `Wie wir von der Leiter gestolpert sind und sich daraus ein interessantes Gepräch über Klang entwickelte.`,
+    subtitle: `Wie wir von der Leiter gestolpert sind und sich daraus ein interessantes Gepräch über Klang entwickelte`,
     teller: `Karen und Andres`,
     image: `Karen-bei-der-Arbeit.jpg`,
     caption: `Karen und Andres bei der Arbeit`,
@@ -25,11 +21,7 @@ const stories = [
     dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
     clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
     consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-    diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-    accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-    dolor sit amet.`,
+    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.`,
     audiofile: `Mut und Zuversicht - Alexander Van der Bellen.mp3`,
   }
 ];
@@ -43,7 +35,7 @@ for (let i = 0; i < stories.length; i++) {
   const storyId = `story-${i + 1}`;
   const direction = (i % 2 === 0) ? 'left' : 'right';
   const innerHTML = `
-    <h4 class="story-title">${story.title || 'no title'}</h4>
+    <h2 class="story-title">${story.title || 'no title'}</h4>
     <p class="story-subtitle">${story.subtitle || 'no subtitle'}</p>
     <p class="story-author">von ${story.teller || 'no teller'}</p>
     <img class="story-image ${direction}" src="stories/${story.image}" alt="${story.caption || 'no image caption'}">
