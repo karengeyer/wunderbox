@@ -54,15 +54,15 @@ nav a:hover {
 }
 
 footer {
+  clear: both;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: right;
-  border-top: 1px solid #ddd;
   font-size: 1em;
   color: inherit;
   text-align: right;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 footer span,
@@ -81,7 +81,7 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 1.4em;
-  margin-bottom: 0.1em;
+  margin-top: 0.5em;
   text-transform: uppercase;
 }
 
@@ -119,4 +119,126 @@ a:active {
 
 a:hover {
   opacity: 0.5;
+}
+
+.story {
+  position: relative;
+  min-height: 300px;
+  margin-top: 1.5em;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 1em;
+  padding: 1em;
+  font-family: "Avenir Next Condensed", Helvetica, sans-serif;
+  text-align: justify;
+}
+
+.story.hidden {
+  display: none;
+}
+
+.story-title {
+  min-width: 200px;
+  clear: both;
+  font-family: "Avenir Next", Helvetica, sans-serif;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.story-subtitle {
+  font-family: "Avenir Next Condensed", Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.story-title,
+.story-subtitle {
+  text-align: left;
+  box-sizing: border-box;
+  padding-right: 50px;
+}
+
+.story-author {
+  font-family: "Avenir Next Condensed", Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.story-image {
+  width: 16em;
+  border-radius: 50%;
+  height: auto;
+  shape-outside: circle();
+}
+
+.story-image.left {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+
+.story-image.right {
+  float: right;
+  margin: 1rem 0 1rem 1em;
+}
+
+.story-image.smaller {
+  width: 200px;
+}
+
+.story-image.no-margin {
+  margin: 0;
+}
+
+.audio-player {
+  position: relative;
+  clear: both;
+  height: 1.5em;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.audio-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+}
+
+.audio-text {
+  position: absolute;
+  left: 2em;
+  top: 0.1em;
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.audio-progress {
+  position: absolute;
+  width: calc(100% - 2.5em);
+  height: 1.3em;
+  left: 2em;
+  top: 0.1em;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.audio-progress.hidden, .audio-text.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.audio-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: white;
+  opacity: 1;
 }
