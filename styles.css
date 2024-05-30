@@ -44,6 +44,10 @@ footer a:active {
 
 footer .copyright {
   white-space: nowrap;
+  border-top-style: solid;
+  border-top-width: 0.5px;
+  margin-top: 0.05em;
+  padding-top: 0.1em;
 }
 
 h1, h2, h3, h4 {

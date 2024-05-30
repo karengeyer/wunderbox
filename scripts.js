@@ -34,7 +34,7 @@ for (let i = 0; i < stories.length; i++) {
   const story = stories[i];
   const storyId = `story-${i + 1}`;
   const direction = (i % 2 === 0) ? 'left' : 'right';
-  const innerHTML = `
+  let innerHTML = `
     <h2 class="story-title">${story.title || 'no title'}</h4>
     <p class="story-subtitle">${story.subtitle || 'no subtitle'}</p>
     <p class="story-author">von ${story.teller || 'no teller'}</p>
@@ -46,6 +46,10 @@ for (let i = 0; i < stories.length; i++) {
       <span class="audio-progress hidden"><span class="audio-bar"></span>
     </div>
   `;
+
+  if (i < stories.length - 1) {
+    innerHTML += '<hr />';
+  }
 
   const storyDiv = document.createElement('div');
   storyDiv.id = storyId;
