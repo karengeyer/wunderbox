@@ -1,4 +1,6 @@
-const stories = [
+const stories = [];
+
+const storiesX = [
   {
     title: `Der Nudelsiebhut`,
     subtitle: `Wie ich ein altes Nudelsieb auf der Straße fand und daraus einen spacingen Hut machte`,

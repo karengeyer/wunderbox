@@ -83,6 +83,7 @@ a:active {
   font-weight: 400;
   text-decoration: underline;
   color: inherit;
+  
 }
 
 a:hover {
@@ -207,4 +208,13 @@ a:hover {
   height: 100%;
   background-color: white;
   opacity: 1;
+}
+
+.placeholder {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  font-family: "Avenir Next Condensed", Helvetica, sans-serif;
+  font-size: 1.5em;
+  text-align: left;
 }
