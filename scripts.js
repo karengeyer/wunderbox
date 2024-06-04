@@ -3,19 +3,19 @@ const stories = [{
   title: `Die Wunderboxerin`,
   audiofile: `WunderboxerIn - 17.02.24, 22.mp3`,
 }, {
-  id: `1.1/13`,
+  id: `1.1`,
   title: `Eugen Jans`,
   audiofile: `Tandem1.13 - EugenJans04.06.24, 15.mp3`,
 }, {
-  id: `1.2/13`,
+  id: `1.2`,
   title: `LeViSu`,
   audiofile: `Tandem1.13 - LeViSu04.06.24, 15.mp3`,
 }, {
-  id: `1.3/13`,
+  id: `1.3`,
   title: `Der rote Overall`,
   audiofile: `Tandem1.13 - Overall04.06.24, 15.mp3`,
 }, {
-  id: `1.4/13`,
+  id: `1.4`,
   title: `Sweet Sounds`,
   audiofile: `Tandem1.13 - SweetSounds04.06.24, 15.mp3`,
 }, ];
