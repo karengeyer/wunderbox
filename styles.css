@@ -92,7 +92,6 @@ a:hover {
 
 .story {
   position: relative;
-  min-height: 300px;
   margin-top: 1.5em;
   padding: 1em;
   border-style: solid;
@@ -106,6 +105,10 @@ a:hover {
 
 .story.hidden {
   display: none;
+}
+
+.story-id {
+  font-weight: 100;
 }
 
 .story-title {

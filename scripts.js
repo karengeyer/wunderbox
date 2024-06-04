@@ -1,32 +1,52 @@
-const stories = [];
+const stories = [{
+  id: `Intro`,
+  title: `Die Wunderboxerin`,
+  audiofile: `WunderboxerIn - 17.02.24, 22.mp3`,
+}, {
+  id: `1.1/13`,
+  title: `Eugen Jans`,
+  audiofile: `Tandem1.13 - EugenJans04.06.24, 15.mp3`,
+}, {
+  id: `1.2/13`,
+  title: `LeViSu`,
+  audiofile: `Tandem1.13 - LeViSu04.06.24, 15.mp3`,
+}, {
+  id: `1.3/13`,
+  title: `Der rote Overall`,
+  audiofile: `Tandem1.13 - Overall04.06.24, 15.mp3`,
+}, {
+  id: `1.4/13`,
+  title: `Sweet Sounds`,
+  audiofile: `Tandem1.13 - SweetSounds04.06.24, 15.mp3`,
+}, ];
 
-const storiesX = [
-  {
-    title: `Der Nudelsiebhut`,
-    subtitle: `Wie ich ein altes Nudelsieb auf der Straße fand und daraus einen spacingen Hut machte`,
-    teller: `Karen Geyer`,
-    image: `Karen-mit-Helm.jpg`,
-    caption: `Karen mit Helm`,
-    description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-    dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.`,
-    audiofile: `Anpacken statt zaudern - Winfried Kretschmann.mp3`,
-  }, {
-    title: `Die Tonleiter runter`,
-    subtitle: `Wie wir von der Leiter gestolpert sind und sich daraus ein interessantes Gepräch über Klang entwickelte`,
-    teller: `Karen und Andres`,
-    image: `Karen-bei-der-Arbeit.jpg`,
-    caption: `Karen und Andres bei der Arbeit`,
-    description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-    dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.`,
-    audiofile: `Mut und Zuversicht - Alexander Van der Bellen.mp3`,
-  }
-];
+// const stories = [
+//   {
+//     title: `Der Nudelsiebhut`,
+//     subtitle: `Wie ich ein altes Nudelsieb auf der Straße fand und daraus einen spacingen Hut machte`,
+//     teller: `Karen Geyer`,
+//     image: `Karen-mit-Helm.jpg`,
+//     caption: `Karen mit Helm`,
+//     description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+//     dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+//     clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+//     consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+//     sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.`,
+//     audiofile: `Anpacken statt zaudern - Winfried Kretschmann.mp3`,
+//   }, {
+//     title: `Die Tonleiter runter`,
+//     subtitle: `Wie wir von der Leiter gestolpert sind und sich daraus ein interessantes Gepräch über Klang entwickelte`,
+//     teller: `Karen und Andres`,
+//     image: `Karen-bei-der-Arbeit.jpg`,
+//     caption: `Karen und Andres bei der Arbeit`,
+//     description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+//     dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+//     clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+//     consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+//     sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.`,
+//     audiofile: `Mut und Zuversicht - Alexander Van der Bellen.mp3`,
+//   }
+// ];
 
 const storyContainer = document.getElementById('stories');
 const audio = new Audio();
@@ -36,12 +56,20 @@ for (let i = 0; i < stories.length; i++) {
   const story = stories[i];
   const storyId = `story-${i + 1}`;
   const direction = (i % 2 === 0) ? 'left' : 'right';
+  // let innerHTML = `
+  //   <h2 class="story-title">${story.title || 'no title'}</h4>
+  //   <p class="story-subtitle">${story.subtitle || 'no subtitle'}</p>
+  //   <p class="story-author">von ${story.teller || 'no teller'}</p>
+  //   <img class="story-image ${direction}" src="stories/${story.image}" alt="${story.caption || 'no image caption'}">
+  //   <p class="story-descr">${story.description || 'no description'}</p>
+  //   <div class="audio-player">
+  //     <img class="audio-button" src="./images/play.png" />
+  //     <span class=audio-text>Podcast abspielen</span>
+  //     <span class="audio-progress hidden"><span class="audio-bar"></span>
+  //   </div>
+  // `;
   let innerHTML = `
-    <h2 class="story-title">${story.title || 'no title'}</h4>
-    <p class="story-subtitle">${story.subtitle || 'no subtitle'}</p>
-    <p class="story-author">von ${story.teller || 'no teller'}</p>
-    <img class="story-image ${direction}" src="stories/${story.image}" alt="${story.caption || 'no image caption'}">
-    <p class="story-descr">${story.description || 'no description'}</p>
+    <h2 class="story-title"><span class="story-id">${story.id || 'no id'} | </span>${story.title || 'no title'}</h4>
     <div class="audio-player">
       <img class="audio-button" src="./images/play.png" />
       <span class=audio-text>Podcast abspielen</span>
