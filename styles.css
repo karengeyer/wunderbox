@@ -52,11 +52,11 @@ footer .copyright {
 
 h1, h2, h3, h4 {
   font-family: "Avenir Next Condensed", Helvetica, sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h1 {
-  font-size: 1.4em;
+  font-size: 1.8em;
   margin-top: 0.5em;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -64,14 +64,20 @@ h1 {
   color: #F5C544;
 }
 
-h1 span.title {
+h1 span.strong {
   font-weight: 500;
-  color: #F5C544;
 }
 
 h2 {
+  font-size: 1.6em;
+  font-weight: 400;
+  color: #F5C544;
+}
+
+h3 {
   font-size: 1.2em;
 }
+
 
 p {
   margin: 0.2em 0;
@@ -90,7 +96,7 @@ a:hover {
   opacity: 0.666;
 }
 
-.story {
+.chapter {
   position: relative;
   margin-top: 1.5em;
   padding: 1em;
@@ -103,8 +109,28 @@ a:hover {
   text-align: justify;
 }
 
-.story.hidden {
+.chapter.hidden {
   display: none;
+}
+
+.chapter-title {
+  clear: both;
+  box-sizing: border-box;
+  min-width: 200px;
+}
+
+.story {
+  position: relative;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0.5);
+}
+
+.story:first-of-type {
+  border-top-style: none;
+  margin-top: 0em;
 }
 
 .story-id {
@@ -115,9 +141,6 @@ a:hover {
   clear: both;
   box-sizing: border-box;
   min-width: 200px;
-  font-family: "Avenir Next Condensed", Helvetica, sans-serif;
-  font-size: 1.3em;
-  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -165,15 +188,14 @@ a:hover {
   clear: both;
   height: 1.5em;
   width: 100%;
-  margin-top: 1em;
 }
 
 .audio-button {
   position: absolute;
   left: 0;
-  top: 0;
-  width: 1.5em;
-  height: 1.5em;
+  top: 0.15em;
+  width: 1.2em;
+  height: 1.2em;
   cursor: pointer;
 }
 

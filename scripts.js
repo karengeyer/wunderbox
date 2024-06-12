@@ -1,4 +1,5 @@
 const beispielStories = [{
+  chapter: 1,
   title: `Erster Titel`,
   subtitle: `Erster Untertitel, der ein wenig länger ist.`,
   author: `Erster Erzähler`,
@@ -10,57 +11,94 @@ const beispielStories = [{
     consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
     sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.`,
   audiofile: `erstes-audiofile.mp3`,
-}, {
-  title: `Zweiter Titel`,
-  subtitle: `Zweiter Untertitel, der ein wenig länger ist.`,
-  author: `Zweiter Erzähler`,
-  image: `zweites-bild.jpg`,
-  caption: `Zweite Bildbeschreibung`,
-  description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-    dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.`,
-  audiofile: `zweites-audiofile.mp3`,
 }];
 
 const stories = [{
-  id: `1.1`,
+  chapter: 1,
   title: `Der rote Overall`,
   audiofile: `Tandem1.13 - Overall04.06.24, 15.mp3`,
 }, {
-  id: `1.2`,
+  chapter: 1,
   title: `LeViSu`,
   audiofile: `Tandem1.13 - LeViSu04.06.24, 15.mp3`,
 }, {
-  id: `1.3`,
+  chapter: 1,
   title: `Eugen Jans`,
   audiofile: `Tandem1.13 - EugenJans04.06.24, 15.mp3`,
 }, {
-  id: `1.4`,
+  chapter: 1,
   title: `Sweet Sounds`,
   audiofile: `Tandem1.13 - SweetSounds04.06.24, 15.mp3`,
 }, {
-  id: `Intro`,
+  chapter: 2,
+  title: `Fern`,
+  audiofile: `Tandem2.13 - Fern08.06.24, 11.mp3`,
+}, {
+  chapter: 2,
+  title: `Mit 93`,
+  audiofile: `Tandem2.13 - Mit93_08.06.24, 11.mp3`,
+}, {
+  chapter: 2,
+  title: `Japanisch`,
+  audiofile: `Tandem2.13 - japanisch08.06.24, 11.mp3`,
+}, {
+  chapter: 4,
+  title: `Islandpferde`,
+  audiofile: `Tandem4.13 - Islandpferde_08.06.24, 16.mp3`,
+}, {
+  chapter: 4,
+  title: `Kiel`,
+  audiofile: `Tandem4.13 - Kiel08.06.24, 17.mp3`,
+}, {
+  chapter: 0,
   title: `Die Wunderboxerin`,
   audiofile: `WunderboxerIn - 17.02.24, 22.mp3`,
 },];
 
-const storyContainer = document.getElementById('stories');
+const chapterContainer = document.getElementById('chapters');
 const audio = new Audio();
 let currentlyPlaying = null;
+
+const numChapters = 13;
+let chapterIndex = 0;
+let chapterDiv = null;
+let storyInChapterIndex = null;
 
 for (let i = 0; i < stories.length; i++) {
   const story = stories[i];
   const storyId = `story-${i + 1}`;
-  const direction = (i % 2 === 0) ? 'left' : 'right';
+  
+  if (story.chapter === 0 || story.chapter > chapterIndex) {
+    // create new chapter
+    chapterIndex = story.chapter;
+    storyInChapterIndex = 0;
+  
+    chapterDiv = document.createElement('div');
+    chapterDiv.classList.add('chapter');
+    chapterContainer.appendChild(chapterDiv);
+
+    if (chapterIndex > 0) {
+      chapterDiv.innerHTML = `<h2 class="chapter-title">${chapterIndex}/${numChapters}</h2>`;
+    } else {
+      chapterDiv.innerHTML = `<h2 class="chapter-title">Intro</h2>`;
+    }
+  }
+
+  const storyDiv = document.createElement('div');
+  storyDiv.id = storyId;
+  storyDiv.classList.add('story');
+  chapterDiv.appendChild(storyDiv);
+
   let innerHTML = ``;
+  const direction = (i % 2 === 0) ? 'left' : 'right';
+
+  storyInChapterIndex++;
 
   if (story.title) {
-    if (story.id) {
-      innerHTML += `<h2 class="story-title"><span class="story-id">${story.id || 'no id'} | </span>${story.title || 'no title'}</h4>`
+    if (chapterIndex > 0) {
+      innerHTML += `<h3 class="story-title"><span class="story-id">${storyInChapterIndex} | </span>${story.title}</h3>`
     } else {
-      innerHTML += `<h2 class="story-title">${story.title}</h4>`;
+      innerHTML += `<h3 class="story-title">${story.title}</h3>`
     }
   }
 
@@ -81,8 +119,7 @@ for (let i = 0; i < stories.length; i++) {
   }
 
   if (story.description) {
-    innerHTML += `<p class="story-descr">${story.description || 'no description'}</p>`;
-
+    innerHTML += `<p class="story-descr">${story.description}</p>`;
   }
 
   innerHTML += `
@@ -96,11 +133,7 @@ for (let i = 0; i < stories.length; i++) {
     innerHTML += '<hr />';
   }
 
-  const storyDiv = document.createElement('div');
-  storyDiv.id = storyId;
-  storyDiv.classList.add('story');
   storyDiv.innerHTML = innerHTML;
-  storyContainer.appendChild(storyDiv);
 
   const audioButton = document.querySelector(`#${storyId} .audio-player .audio-button`);
   const audioProgress = document.querySelector(`#${storyId} .audio-player .audio-progress`);
