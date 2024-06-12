@@ -141,6 +141,7 @@ a:hover {
   clear: both;
   box-sizing: border-box;
   min-width: 200px;
+  margin-bottom: 0.333em;
   text-transform: uppercase;
 }
 
