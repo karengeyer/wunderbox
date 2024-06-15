@@ -14,6 +14,47 @@ const beispielStories = [{
 }];
 
 const stories = [{
+  chapter: 5,
+  title: `Alquarah Mountain`,
+  audiofile: `Tandem5.13 - Alquarah Mountain KSA12.06.24, 12.mp3`,
+
+}, {
+  chapter: 5,
+  title: `Das Kulistempel`,
+  audiofile: `Tandem5.13 - Das Kulistempel Date 12.06.24, 13.mp3`,
+}, {
+  chapter: 5,
+  title: `Der Zytturm aus Architektenperspektive`,
+  audiofile: `Tandem5.13 - Der Zytturm aus Architektenperspektive12.06.24, 14.mp3`,
+}, {
+  chapter: 5,
+  title: `Sisters of Jesus Christ`,
+  audiofile: `Tandem5.13 - Sisters of Jesus ChristUSA12.06.24, 12.mp3`,
+}, {
+  chapter: 5,
+  title: `Wein in Rumänien`,
+  audiofile: `Tandem5.13 - Wein in Rumänien12.06.24, 13.mp3`,
+}, {
+  chapter: 4,
+  title: `Islandpferde`,
+  audiofile: `Tandem4.13 - Islandpferde_08.06.24, 16.mp3`,
+}, {
+  chapter: 4,
+  title: `Kiel`,
+  audiofile: `Tandem4.13 - Kiel08.06.24, 17.mp3`,
+}, {
+  chapter: 2,
+  title: `Fern`,
+  audiofile: `Tandem2.13 - Fern08.06.24, 11.mp3`,
+}, {
+  chapter: 2,
+  title: `Mit 93`,
+  audiofile: `Tandem2.13 - Mit93_08.06.24, 11.mp3`,
+}, {
+  chapter: 2,
+  title: `Japanisch`,
+  audiofile: `Tandem2.13 - japanisch08.06.24, 11.mp3`,
+}, {
   chapter: 1,
   title: `Der rote Overall`,
   audiofile: `Tandem1.13 - Overall04.06.24, 15.mp3`,
@@ -30,30 +71,10 @@ const stories = [{
   title: `Sweet Sounds`,
   audiofile: `Tandem1.13 - SweetSounds04.06.24, 15.mp3`,
 }, {
-  chapter: 2,
-  title: `Fern`,
-  audiofile: `Tandem2.13 - Fern08.06.24, 11.mp3`,
-}, {
-  chapter: 2,
-  title: `Mit 93`,
-  audiofile: `Tandem2.13 - Mit93_08.06.24, 11.mp3`,
-}, {
-  chapter: 2,
-  title: `Japanisch`,
-  audiofile: `Tandem2.13 - japanisch08.06.24, 11.mp3`,
-}, {
-  chapter: 4,
-  title: `Islandpferde`,
-  audiofile: `Tandem4.13 - Islandpferde_08.06.24, 16.mp3`,
-}, {
-  chapter: 4,
-  title: `Kiel`,
-  audiofile: `Tandem4.13 - Kiel08.06.24, 17.mp3`,
-}, {
   chapter: 0,
   title: `Die Wunderboxerin`,
   audiofile: `WunderboxerIn - 17.02.24, 22.mp3`,
-},];
+}];
 
 const chapterContainer = document.getElementById('chapters');
 const audio = new Audio();
@@ -67,12 +88,12 @@ let storyInChapterIndex = null;
 for (let i = 0; i < stories.length; i++) {
   const story = stories[i];
   const storyId = `story-${i + 1}`;
-  
-  if (story.chapter === 0 || story.chapter > chapterIndex) {
+
+  if (story.chapter === 0 || story.chapter !== chapterIndex) {
     // create new chapter
     chapterIndex = story.chapter;
     storyInChapterIndex = 0;
-  
+
     chapterDiv = document.createElement('div');
     chapterDiv.classList.add('chapter');
     chapterContainer.appendChild(chapterDiv);
@@ -187,15 +208,15 @@ function startPlaying(story) {
   state.button.src = './images/pause.png';
   state.progress.classList.remove('hidden');
   state.text.classList.add('hidden');
+  state.bar.style.width = 0;
   state.playing = true;
 }
-
 
 function stopPlaying(story, hideProgress) {
   const state = story.state;
   audio.pause();
   state.button.src = './images/play.png';
-  state.bar.style.width = 0;
+  //state.bar.style.width = 0;
   state.playing = false;
 
   if (hideProgress) {
@@ -209,5 +230,11 @@ audio.addEventListener('timeupdate', () => {
     const state = currentlyPlaying.state;
     const progress = audio.currentTime / audio.duration;
     state.bar.style.width = `${100 * progress}%`;
+  }
+});
+
+audio.addEventListener('ended', () => {
+  if (currentlyPlaying !== null) {
+    stopPlaying(currentlyPlaying);
   }
 });
