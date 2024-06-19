@@ -13,67 +13,90 @@ const beispielStories = [{
   audiofile: `erstes-audiofile.mp3`,
 }];
 
+
+
+
 const stories = [{
-  chapter: 5,
-  title: `Alquarah Mountain`,
-  audiofile: `Tandem5.13 - Alquarah Mountain KSA12.06.24, 12.mp3`,
+  chapter: 7,
+  title: 'Landsend to Johno',
+  audiofile: 'Tandem7.13 - Das Gebet der Gemeindeältesten.mp3',
+
+}, {
+  chapter: 7,
+  title: 'Landsend to Johno`groats',
+  audiofile: 'Tandem7.13 - Landsend to Johno groats.mp3',
+
+}, {
+  chapter: 7,
+  title: 'Lost in the rainforest',
+  audiofile: 'Tandem7.13 - Lost in the rainforest.mp3',
+
+}, {
+  chapter: 7,
+  title: 'My italian Affair',
+  audiofile: 'Tandem7.13 - My italian Affair.mp3',
 
 }, {
   chapter: 5,
-  title: `Das Kulistempel`,
-  audiofile: `Tandem5.13 - Das Kulistempel Date 12.06.24, 13.mp3`,
+  title: 'Alquarah Mountain',
+  audiofile: 'Tandem5.13 - Alquarah Mountain KSA12.06.24, 12.mp3',
+
 }, {
   chapter: 5,
-  title: `Der Zytturm aus Architektenperspektive`,
-  audiofile: `Tandem5.13 - Der Zytturm aus Architektenperspektive12.06.24, 14.mp3`,
+  title: 'Das Kulistempel',
+  audiofile: 'Tandem5.13 - Das Kulistempel Date 12.06.24, 13.mp3',
 }, {
   chapter: 5,
-  title: `Sisters of Jesus Christ`,
-  audiofile: `Tandem5.13 - Sisters of Jesus ChristUSA12.06.24, 12.mp3`,
+  title: 'Der Zytturm aus Architektenperspektive',
+  audiofile: 'Tandem5.13 - Der Zytturm aus Architektenperspektive12.06.24, 14.mp3',
 }, {
   chapter: 5,
-  title: `Wein in Rumänien`,
-  audiofile: `Tandem5.13 - Wein in Rumänien12.06.24, 13.mp3`,
+  title: 'Sisters of Jesus Christ',
+  audiofile: 'Tandem5.13 - Sisters of Jesus ChristUSA12.06.24, 12.mp3',
+}, {
+  chapter: 5,
+  title: 'Wein in Rumänien',
+  audiofile: 'Tandem5.13 - Wein in Rumänien12.06.24, 13.mp3',
 }, {
   chapter: 4,
-  title: `Islandpferde`,
-  audiofile: `Tandem4.13 - Islandpferde_08.06.24, 16.mp3`,
+  title: 'Islandpferde',
+  audiofile: 'Tandem4.13 - Islandpferde_08.06.24, 16.mp3',
 }, {
   chapter: 4,
-  title: `Kiel`,
-  audiofile: `Tandem4.13 - Kiel08.06.24, 17.mp3`,
+  title: 'Kiel',
+  audiofile: 'Tandem4.13 - Kiel08.06.24, 17.mp3',
 }, {
   chapter: 2,
-  title: `Fern`,
-  audiofile: `Tandem2.13 - Fern08.06.24, 11.mp3`,
+  title: 'Fern',
+  audiofile: 'Tandem2.13 - Fern08.06.24, 11.mp3',
 }, {
   chapter: 2,
-  title: `Mit 93`,
-  audiofile: `Tandem2.13 - Mit93_08.06.24, 11.mp3`,
+  title: 'Mit 93',
+  audiofile: 'Tandem2.13 - Mit93_08.06.24, 11.mp3',
 }, {
   chapter: 2,
-  title: `Japanisch`,
-  audiofile: `Tandem2.13 - japanisch08.06.24, 11.mp3`,
+  title: 'Japanisch',
+  audiofile: 'Tandem2.13 - japanisch08.06.24, 11.mp3',
 }, {
   chapter: 1,
-  title: `Der rote Overall`,
-  audiofile: `Tandem1.13 - Overall04.06.24, 15.mp3`,
+  title: 'Der rote Overall',
+  audiofile: 'Tandem1.13 - Overall04.06.24, 15.mp3',
 }, {
   chapter: 1,
-  title: `LeViSu`,
-  audiofile: `Tandem1.13 - LeViSu04.06.24, 15.mp3`,
+  title: 'LeViSu',
+  audiofile: 'Tandem1.13 - LeViSu04.06.24, 15.mp3',
 }, {
   chapter: 1,
-  title: `Eugen Jans`,
-  audiofile: `Tandem1.13 - EugenJans04.06.24, 15.mp3`,
+  title: 'Eugen Jans',
+  audiofile: 'Tandem1.13 - EugenJans04.06.24, 15.mp3',
 }, {
   chapter: 1,
-  title: `Sweet Sounds`,
-  audiofile: `Tandem1.13 - SweetSounds04.06.24, 15.mp3`,
+  title: 'Sweet Sounds',
+  audiofile: 'Tandem1.13 - SweetSounds04.06.24, 15.mp3',
 }, {
   chapter: 0,
-  title: `Die Wunderboxerin`,
-  audiofile: `WunderboxerIn - 17.02.24, 22.mp3`,
+  title: 'Die Wunderboxerin',
+  audiofile: 'WunderboxerIn - 17.02.24, 22.mp3',
 }];
 
 const chapterContainer = document.getElementById('chapters');
