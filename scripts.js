@@ -21,7 +21,7 @@ const stories = [{
 }, {
   chapter: 7,
   title: 'Landsend to John o`Groats',
-  audiofile: 'Tandem7.13 - Landsend to Johno groats.mp3',
+  audiofile: 'Tandem7.13 - Landsend to John o groats.mp3',
 
 }, {
   chapter: 7,
