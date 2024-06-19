@@ -18,7 +18,7 @@ const beispielStories = [{
 
 const stories = [{
   chapter: 7,
-  title: 'Landsend to Johno',
+  title: 'Das Gebet der Gemeindeältesten',
   audiofile: 'Tandem7.13 - Das Gebet der Gemeindeältesten.mp3',
 
 }, {
