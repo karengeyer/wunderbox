@@ -20,17 +20,17 @@ const stories = [{
 
 }, {
   chapter: 7,
-  title: 'Landsend to Johno`groats',
+  title: 'Landsend to John o`Groats',
   audiofile: 'Tandem7.13 - Landsend to Johno groats.mp3',
 
 }, {
   chapter: 7,
-  title: 'Lost in the rainforest',
+  title: 'Lost in the Rainforest',
   audiofile: 'Tandem7.13 - Lost in the rainforest.mp3',
 
 }, {
   chapter: 7,
-  title: 'My italian Affair',
+  title: 'My Italian Affair',
   audiofile: 'Tandem7.13 - My italian Affair.mp3',
 
 }, {
