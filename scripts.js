@@ -13,9 +13,6 @@ const beispielStories = [{
   audiofile: `erstes-audiofile.mp3`,
 }];
 
-
-
-
 const stories = [{
   chapter: 7,
   title: 'Das Gebet der Gemeindeältesten',
@@ -231,7 +228,6 @@ function startPlaying(story) {
   state.button.src = './images/pause.png';
   state.progress.classList.remove('hidden');
   state.text.classList.add('hidden');
-  state.bar.style.width = 0;
   state.playing = true;
 }
 
@@ -239,7 +235,7 @@ function stopPlaying(story, hideProgress) {
   const state = story.state;
   audio.pause();
   state.button.src = './images/play.png';
-  //state.bar.style.width = 0;
+  state.bar.style.width = 0;
   state.playing = false;
 
   if (hideProgress) {
