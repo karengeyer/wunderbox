@@ -63,6 +63,14 @@ const stories = [{
   title: 'Kiel',
   audiofile: 'Tandem4.13 - Kiel08.06.24, 17.mp3',
 }, {
+  chapter: 3,
+  title: 'Caves',
+  audiofile: 'Tandem3.13 - Caves08.06.24, 13.mp3',
+}, {
+  chapter: 3,
+  title: 'Hochzeitsgeburi',
+  audiofile: 'Tandem3.13 - Hochzeitsgeburi.mp3',
+}, {
   chapter: 2,
   title: 'Fern',
   audiofile: 'Tandem2.13 - Fern08.06.24, 11.mp3',
