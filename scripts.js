@@ -14,6 +14,26 @@ const beispielStories = [{
 }];
 
 const stories = [{
+  chapter: 11,
+  title: 'Das gelbe Brautkleid',
+  audiofile: 'Tandem11.13 - Das gelbe Brautkleid.mp3',
+
+}, {
+  chapter: 11,
+  title: 'Faszination Weben',
+  audiofile: 'Tandem11.13 - Faszination Weben.mp3',
+
+}, {
+  chapter: 11,
+  title: 'Hello from Australia',
+  audiofile: 'Tandem11.13 - Hello from Australia.mp3',
+
+}, {
+  chapter: 11,
+  title: 'Miracle of my family',
+  audiofile: 'Tandem11.13 - Miracle of my family.mp3',
+
+}, {
   chapter: 7,
   title: 'Das Gebet der Gemeindeältesten',
   audiofile: 'Tandem7.13 - Das Gebet der Gemeindeältesten.mp3',
