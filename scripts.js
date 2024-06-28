@@ -14,6 +14,11 @@ const beispielStories = [{
 }];
 
 const stories = [{
+  chapter: 12,
+  title: 'Gorbatschov & Tutu',
+  audiofile: 'Tandem12.13 - Gorbatschov & Tutu.mp3',
+
+}, {
   chapter: 11,
   title: 'Das gelbe Brautkleid',
   audiofile: 'Tandem11.13 - Das gelbe Brautkleid.mp3',
@@ -34,6 +39,30 @@ const stories = [{
   audiofile: 'Tandem11.13 - Miracle of my family.mp3',
 
 }, {
+  chapter: 11,
+  title: 'Miracle of my family',
+  audiofile: 'Tandem11.13 - Miracle of my family.mp3',
+
+}, {
+  chapter: 9,
+  title: 'Davoser Sage',
+  audiofile: 'Tandem9.13 - Davoser Sage.mp3',
+}, {
+  chapter: 9,
+  title: 'Einsiedler Sage',
+  audiofile: 'Tandem9.13 - Einsiedler Sage.mp3',
+
+}, {
+  chapter: 8,
+  title: 'Geschenkbox upcycling',
+  audiofile: 'Tandem8.13 - Geschenkbox upcycling.mp3',
+
+}, {
+  chapter: 8,
+  title: 'Alltägliches Wunder',
+  audiofile: 'Tandem8.13 - alltägliches_Wunder.mp3',
+
+}, {
   chapter: 7,
   title: 'Das Gebet der Gemeindeältesten',
   audiofile: 'Tandem7.13 - Das Gebet der Gemeindeältesten.mp3',
@@ -52,6 +81,16 @@ const stories = [{
   chapter: 7,
   title: 'My Italian Affair',
   audiofile: 'Tandem7.13 - My italian Affair.mp3',
+
+}, {
+  chapter: 6,
+  title: 'Atlantiküberquerung',
+  audiofile: 'Tandem6.13 - Atlantiküberquerung.mp3',
+
+}, {
+  chapter: 6,
+  title: 'Hoffnung am Horizont',
+  audiofile: 'Tandem6.13 - Hoffnung am Horizont.mp3',
 
 }, {
   chapter: 5,
